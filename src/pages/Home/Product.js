@@ -8,20 +8,20 @@ const Product = ({ product }) => {
         navigate(`/placeOrder/${_id}`)
     }
     return (
-        <div class="card shadow-xl">
-            <figure class="px-5 pt-5">
-                <img src={img} alt="Shoes" class="rounded-xl max-h-80" />
+        <div className="card shadow-xl">
+            <figure className="px-5 pt-5">
+                <img src={img} alt="Shoes" className="rounded-xl max-h-80" />
             </figure>
-            <div class="card-body items-center text-center">
-                <h2 class="card-title text-primary">{name}</h2>
+            <div className="card-body items-center text-center">
+                <h2 className="card-title text-primary">{name}</h2>
                 <p><small>{description}</small></p>
-                <div class="divider"></div>
+                <div className="divider"></div>
                 <p>Available Items: {stock}<small> units</small></p>
                 <p><small>Minimum Order Quantity: {min} units</small></p>
                 <p className='font-bold'>Price: ${price}<small> (per unit)</small></p>
             </div>
-            <div class="w-full m-0 p-0">
-                <button onClick={handleOrderNow} class="btn btn-white w-full text-white rounded-t-none">Order Now</button>
+            <div className="w-full m-0 p-0">
+                <button onClick={handleOrderNow} className="btn btn-white w-full text-white rounded-t-none">Order Now</button>
             </div>
         </div>
     );
