@@ -7,9 +7,9 @@ module.exports = {
     themes: [
       {
         carHubTheme: {
-          primary: "#a991f7",
-          secondary: "#f6d860",
-          accent: "#37cdbe",
+          primary: "#37CDBE",
+          secondary: "#F000B8",
+          accent: "#570DF8",
           neutral: "#3d4451",
           "base-100": "#ffffff",
         },
