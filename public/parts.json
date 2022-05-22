@@ -1,0 +1,56 @@
+[
+  {
+    "_id": 1,
+    "name": "Headlight",
+    "description": "A headlamp is a lamp attached to the front of a vehicle to illuminate the road ahead.Headlamps are also often called headlights.",
+    "img": "https://i.ibb.co/ygtSxTZ/head-Light.jpg",
+    "min": 100,
+    "stock": 1250,
+    "price": 94
+  },
+  {
+    "_id": 2,
+    "name": "Brake light",
+    "description": "A brake light is a red light attached to the rear of a motor vehicle that lights up when the brakes are applied, serving as a warning to following drivers.",
+    "img": "https://i.ibb.co/LvxPSV6/break-Light.jpg",
+    "min": 150,
+    "stock": 1850,
+    "price": 30
+  },
+  {
+    "_id": 3,
+    "name": "Tire",
+    "description": "Every car has four wheels. The black part of the wheel, which is made out of rubber with air inside, is called a tire.They’re where your tires are actually attached.",
+    "img": "https://i.ibb.co/ZhwSsMw/tire.jpg",
+    "min": 50,
+    "stock": 850,
+    "price": 140
+  },
+  {
+    "_id": 4,
+    "name": "Windshield Wiper",
+    "description": "A windscreen wiper or windshield wiper is a device used to remove rain, snow, ice, washer fluid, water, and/or debris from a vehicle’s front window.",
+    "img": "https://i.ibb.co/TqfFpkP/wind-Shield-Wiper.jpg",
+    "min": 200,
+    "stock": 2250,
+    "price": 28
+  },
+  {
+    "_id": 5,
+    "name": "Rear-view Mirror",
+    "description": "A rear-view mirror is a flat mirror in automobiles and other vehicles, designed to allow the driver to see rearward through the vehicle's rear window.",
+    "img": "https://i.ibb.co/7yK3FRQ/rear-View-Mirror.jpg",
+    "min": 150,
+    "stock": 1500,
+    "price": 65
+  },
+  {
+    "_id": 6,
+    "name": "Hubcap",
+    "description": "A hubcap or hub cap is a decorative disk on an automobile wheel that covers at minimum the central portion of the wheel, called the hub.",
+    "img": "https://i.ibb.co/1J0Gb4V/hubCap.jpg",
+    "min": 140,
+    "stock": 1750,
+    "price": 40
+  }
+]
