@@ -5,7 +5,7 @@ const Product = ({ product }) => {
     const { _id, name, img, description, min, stock, price } = product;
     const navigate = useNavigate();
     const handleOrderNow = () => {
-        navigate(`/placeOrder/${_id}`)
+        navigate(`/place-order/${_id}`)
     }
     return (
         <div className="card shadow-xl">
