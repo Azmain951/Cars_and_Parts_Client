@@ -1,8 +1,8 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import auth from '../../firebase.init';
+import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 
 const Login = () => {
@@ -20,7 +20,12 @@ const Login = () => {
 
 
     let signinError;
-
+    useEffect(() => {
+        if (user || googleUser) {
+            console.log(user)
+            navigate('/');
+        }
+    }, [user, googleUser]);
 
     if (loading || googleLoading) {
         return <Loading></Loading>

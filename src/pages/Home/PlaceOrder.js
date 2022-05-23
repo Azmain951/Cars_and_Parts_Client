@@ -8,7 +8,7 @@ const PlaceOrder = () => {
     const [order, setOrder] = useState(null);
     useEffect(() => {
         fetch(`http://localhost:5000/products/${id}`).then(res => res.json()).then(data => setProduct(data));
-    }, []);
+    }, [product]);
 
     return (
         <div className="hero m-5">
