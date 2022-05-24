@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddProduct from './pages/Dashboard/AddProduct';
+import AddReview from './pages/Dashboard/AddReview';
 import Dashboard from './pages/Dashboard/Dashboard';
 import ManageOrders from './pages/Dashboard/ManageOrders';
 import ManageProducts from './pages/Dashboard/ManageProducts';
@@ -26,7 +27,7 @@ function App() {
 
         <Route path='dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
-          <Route path='reviews' element={<MyReviews></MyReviews>}></Route>
+          <Route path='add-review' element={<AddReview></AddReview>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='manage-products' element={<ManageProducts></ManageProducts>}></Route>
           <Route path='add-products' element={<AddProduct></AddProduct>}></Route>
