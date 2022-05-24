@@ -7,7 +7,6 @@ import ManageOrders from './pages/Dashboard/ManageOrders';
 import ManageProducts from './pages/Dashboard/ManageProducts';
 import MyOrders from './pages/Dashboard/MyOrders';
 import MyProfile from './pages/Dashboard/MyProfile';
-import MyReviews from './pages/Dashboard/MyReviews';
 import Home from './pages/Home/Home';
 import PlaceOrder from './pages/Home/PlaceOrder';
 import Login from './pages/Login/Login';

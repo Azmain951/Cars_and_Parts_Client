@@ -79,10 +79,6 @@ const AddProduct = () => {
                     <input type='submit' class="btn btn-primary text-white" value='Add Product' />
                 </div>
             </form>
-
-            <div className='mt-5'>
-                <h2 className='text-3xl'>My Reviews</h2>
-            </div>
         </div>
     );
 };
