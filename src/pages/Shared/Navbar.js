@@ -13,7 +13,6 @@ const Navbar = () => {
     const logout = () => {
         signOut(auth);
     }
-    console.log(user);
     return (
         <nav className="navbar bg-base-100">
             <div className="navbar-start">

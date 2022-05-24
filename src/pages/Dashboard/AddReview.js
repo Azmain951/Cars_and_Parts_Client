@@ -17,7 +17,6 @@ const AddReview = () => {
             comment
         }
 
-        console.log(review);
         fetch(`https://obscure-wave-68553.herokuapp.com/review`, {
             method: 'POST',
             headers: {

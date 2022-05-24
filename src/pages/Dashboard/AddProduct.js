@@ -20,11 +20,11 @@ const AddProduct = () => {
             img
         }
 
-        console.log(newProduct);
         fetch(`https://obscure-wave-68553.herokuapp.com/products`, {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'authorization': `Bearer ${localStorage.getItem('token')}`
             },
             body: JSON.stringify(newProduct)
         })

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const MyOrder = ({ order, index }) => {
-    console.log(order)
     const { product, quantity, price } = order
     return (
         <tr class="hover">
