@@ -10,7 +10,7 @@ const MyOrders = () => {
         fetch(`http://localhost:5000/orders/${user.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
-    }, []);
+    }, [user.email, myOrders]);
     return (
         <div className='shadow-2xl m-5 p-5 rounded-box'>
             <h2 className='text-2xl text-center mb-5'>Your Orders {myOrders?.length}</h2>

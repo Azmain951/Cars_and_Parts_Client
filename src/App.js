@@ -3,6 +3,7 @@ import './App.css';
 import AddProduct from './pages/Dashboard/AddProduct';
 import AddReview from './pages/Dashboard/AddReview';
 import Dashboard from './pages/Dashboard/Dashboard';
+import MakeAdmin from './pages/Dashboard/MakeAdmin';
 import ManageOrders from './pages/Dashboard/ManageOrders';
 import ManageProducts from './pages/Dashboard/ManageProducts';
 import MyOrders from './pages/Dashboard/MyOrders';
@@ -31,6 +32,7 @@ function App() {
           <Route path='manage-products' element={<ManageProducts></ManageProducts>}></Route>
           <Route path='add-products' element={<AddProduct></AddProduct>}></Route>
           <Route path='manage-orders' element={<ManageOrders></ManageOrders>}></Route>
+          <Route path='make-admin' element={<MakeAdmin></MakeAdmin>}></Route>
         </Route>
 
         <Route path='login' element={<Login></Login>}></Route>
