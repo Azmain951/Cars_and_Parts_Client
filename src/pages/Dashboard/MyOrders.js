@@ -7,7 +7,12 @@ const MyOrders = () => {
     const [user, loading] = useAuthState(auth);
     const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${user.email}`)
+        fetch(`https://obscure-wave-68553.herokuapp.com/orders/${user.email}`, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [user.email, myOrders]);
@@ -28,7 +33,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            myOrders.map((order, index) => <MyOrder
+                            myOrders?.map((order, index) => <MyOrder
                                 index={index}
                                 key={order._id}
                                 order={order}

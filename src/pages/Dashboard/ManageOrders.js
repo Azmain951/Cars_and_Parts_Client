@@ -4,7 +4,12 @@ import ManageOrder from './ManageOrder';
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders`).then(res => res.json()).then(data => setOrders(data));
+        fetch(`https://obscure-wave-68553.herokuapp.com/orders`, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        }).then(res => res.json()).then(data => setOrders(data));
     }, [orders])
     return (
         <div className='m-5 p-5 shadow-2xl rounded-box'>
@@ -23,7 +28,7 @@ const ManageOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <ManageOrder
+                            orders?.map((order, index) => <ManageOrder
                                 index={index}
                                 key={order._id}
                                 order={order}

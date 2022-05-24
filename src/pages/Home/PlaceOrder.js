@@ -7,7 +7,7 @@ const PlaceOrder = () => {
     const [product, setProduct] = useState({});
     const [order, setOrder] = useState(null);
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`).then(res => res.json()).then(data => setProduct(data));
+        fetch(`https://obscure-wave-68553.herokuapp.com/products/${id}`).then(res => res.json()).then(data => setProduct(data));
     }, [product]);
 
     return (

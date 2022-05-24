@@ -27,7 +27,7 @@ const OrderModal = ({ order }) => {
             stock
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://obscure-wave-68553.herokuapp.com/orders', {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

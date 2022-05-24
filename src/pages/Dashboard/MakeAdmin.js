@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import User from './User';
 
 const MakeAdmin = () => {
     const [user, loading] = useAuthState(auth);
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/user`)
+        fetch(`https://obscure-wave-68553.herokuapp.com/user`, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users]);
@@ -25,18 +31,11 @@ const MakeAdmin = () => {
                     </thead>
                     <tbody>
                         {
-                            users.map((u, index) =>
-                                <tr>
-                                    <th>{index + 1}</th>
-                                    <th>{u.email}</th>
-                                    <th>
-                                        <button className='btn btn-xs btn-neutral'>Make Admin</button>
-                                    </th>
-                                    <th>
-                                        <button className='btn btn-xs btn-error'>Remove User</button>
-                                    </th>
-                                </tr>
-                            )
+                            users?.map((u, index) => <User
+                                index={index}
+                                key={u._id}
+                                user={u}
+                            ></User>)
                         }
                     </tbody>
                 </table>

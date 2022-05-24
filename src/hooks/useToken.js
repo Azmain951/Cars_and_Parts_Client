@@ -11,7 +11,7 @@ const useToken = user => {
             email
         };
         if (email) {
-            fetch(`http://localhost:5000/user/${email}`, {
+            fetch(`https://obscure-wave-68553.herokuapp.com/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

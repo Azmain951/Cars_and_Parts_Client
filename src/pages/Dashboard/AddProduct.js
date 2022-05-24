@@ -21,7 +21,7 @@ const AddProduct = () => {
         }
 
         console.log(newProduct);
-        fetch(`http://localhost:5000/products`, {
+        fetch(`https://obscure-wave-68553.herokuapp.com/products`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
