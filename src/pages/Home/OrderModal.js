@@ -30,7 +30,10 @@ const OrderModal = ({ order }) => {
         fetch('https://obscure-wave-68553.herokuapp.com/orders', {
             method: 'PATCH',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('token')}`
+                }
             },
             body: JSON.stringify(newOrder)
         })

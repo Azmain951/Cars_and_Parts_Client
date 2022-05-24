@@ -8,6 +8,10 @@ const MyProfile = () => {
     if (loading) {
         return <Loading></Loading>
     }
+
+    const handleProfileUpdate = e => {
+        e.preventDefault();
+    }
     return (
         <div className='shadow-xl rounded-box text-3xl text-center m-5 p-5'>
             <h2 className='mb-3'>My Profile</h2>
@@ -26,7 +30,7 @@ const MyProfile = () => {
                         <input disabled readOnly type="text" value={user?.email} class="input input-bordered w-full max-w-sm " />
                     </div>
                 </div>
-                <div className='flex-1 ml-5'>
+                <form className='flex-1 ml-5' onSubmit={handleProfileUpdate}>
                     <div class="w-full max-w-sm m-5">
                         <label class="label">
                             <span class="label-text">Phone Number</span>
@@ -37,9 +41,12 @@ const MyProfile = () => {
                         <label class="label">
                             <span class="label-text">Address</span>
                         </label>
-                        <textarea type="text" placeholder='Address' class="input input-bordered w-full max-w-sm " />
+                        <textarea type="text" placeholder='Address' class="textarea textarea-bordered w-full max-w-sm " />
                     </div>
-                </div>
+                    <div class="form-control my-5 ml-5 items-start">
+                        <input type='submit' class="btn btn-primary text-white" value='Update Info' />
+                    </div>
+                </form>
             </div>
         </div>
     );
