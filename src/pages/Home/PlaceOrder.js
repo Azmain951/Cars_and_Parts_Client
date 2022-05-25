@@ -32,6 +32,7 @@ const PlaceOrder = () => {
                 order && <OrderModal
                     key={order._id}
                     order={order}
+                    setOrder={setOrder}
                 ></OrderModal>
             }
         </div >

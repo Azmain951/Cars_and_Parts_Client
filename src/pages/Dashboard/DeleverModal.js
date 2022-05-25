@@ -12,7 +12,6 @@ const DeleverModal = ({ selected, handleDeliver }) => {
                         <label onClick={handleDeliver} class="btn btn-sm btn-success">Deliver</label>
                         <label for="deliver-modal" class="btn btn-sm">Cancel</label>
                     </div>
-
                 </div>
             </div>
         </div >

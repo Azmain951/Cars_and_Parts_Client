@@ -1,5 +1,7 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { toHaveStyle } from '@testing-library/jest-dom/dist/matchers';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const CheckoutFrom = ({ order }) => {
     const stripe = useStripe();
@@ -12,7 +14,7 @@ const CheckoutFrom = ({ order }) => {
     const [clientSecret, setClientSecret] = useState('');
 
     const totalPrice = price * quantity;
-    console.log(totalPrice);
+    const [cost, setCost] = useState('');
     useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
@@ -71,6 +73,7 @@ const CheckoutFrom = ({ order }) => {
             setTransactionId(paymentIntent.id);
             console.log(paymentIntent)
             setSuccess('Congrats! Your payment is completed.');
+            setCost(totalPrice);
 
             const payment = {
                 order: _id,
@@ -89,7 +92,7 @@ const CheckoutFrom = ({ order }) => {
             }).then(res => res.json())
                 .then(data => {
                     setProcessing(false);
-                    console.log(data);
+                    toast.success('Payment Successful!!!');
                 })
         }
 
@@ -123,6 +126,7 @@ const CheckoutFrom = ({ order }) => {
             {
                 success && <div className='text-green-500'>
                     <p>{success}</p>
+                    <p>You Paid: ${cost}</p>
                     <p>Your Transaction ID: <span className='text-orange-500'>{transactionId}</span> </p>
                 </div>
             }

@@ -19,6 +19,7 @@ const ManageOrder = ({ index, order }) => {
             .then(data => {
                 toast.success(`The Order of ${quantity} units of ${product} is cancelled successfully!!!`);
             })
+        setSelected(null);
     }
 
     const handleDeliver = () => {
@@ -40,6 +41,7 @@ const ManageOrder = ({ index, order }) => {
                 console.log(data);
                 toast.success(`Order of ${quantity} units of ${product} is shipped to ${name}, ${address} successfully`);
             })
+        setDeliver(null);
     }
     return (
         <tr>
@@ -52,6 +54,7 @@ const ManageOrder = ({ index, order }) => {
             <td>
                 {(status === 'not paid' || !status) && <label for="delete-order" onClick={() => setSelected(order)} class="btn btn-xs btn-error">Cancel</label>}
                 {status === 'pending' && <label for="deliver-modal" onClick={() => setDeliver(order)} class="btn btn-xs btn-warning">Deliver</label>}
+                {status === 'shipped' && <span className='text text-warning'>Delivered</span>}
             </td>
             {
                 selected && <DeleteOrder

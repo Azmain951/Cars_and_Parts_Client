@@ -17,6 +17,7 @@ const ManageProduct = ({ index, product }) => {
             .then(data => {
                 toast.success(`The Product ${name} with ${stock} units of stock is removed successfully!!!`);
             })
+        setSelected(null);
     }
     return (
         <tr>

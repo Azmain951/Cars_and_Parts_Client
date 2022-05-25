@@ -3,10 +3,13 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useToken from '../../hooks/useToken';
+import { toast } from 'react-toastify';
 
 const Register = () => {
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/"
     const navigate = useNavigate();
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -24,7 +27,8 @@ const Register = () => {
 
     useEffect(() => {
         if (token) {
-            navigate('/');
+            toast.success('User is registered successfully');
+            navigate(from, { replace: true });
         };
     }, [navigate, token])
 

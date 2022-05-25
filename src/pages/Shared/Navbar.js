@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const [user, loading] = useAuthState(auth);
@@ -12,6 +13,7 @@ const Navbar = () => {
     }
     const logout = () => {
         signOut(auth);
+        toast.success('User is logged out!!!')
     }
     return (
         <nav className="navbar bg-base-100 px-12">

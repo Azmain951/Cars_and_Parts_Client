@@ -18,6 +18,7 @@ const MyOrder = ({ order, index }) => {
             .then(data => {
                 toast.success(`Your Order of ${quantity} units of ${product} is cancelled successfully!!!`);
             })
+        setSelected(null);
     }
     return (
         <tr class="hover">

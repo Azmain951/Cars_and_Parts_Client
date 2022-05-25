@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const User = ({ user, index }) => {
     const { email, role } = user;
@@ -9,16 +10,10 @@ const User = ({ user, index }) => {
                 authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
-            .then(res => {
-                if (res.status === 403) {
-                    console.log(res)
-                }
-                return res.json()
-            })
+            .then(res => res.json())
             .then(data => {
-                if (data.modifiedCount > 0) {
-                    console.log(data)
-                }
+                console.log(data);
+                toast.success(`${email} is made Admin successfully`);
             })
     }
     return (

@@ -3,8 +3,9 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
+import { toast } from 'react-toastify';
 
-const OrderModal = ({ order }) => {
+const OrderModal = ({ order, setOrder }) => {
     const { _id, name, min, stock, price } = order;
     const [status, setStatus] = useState(false);
     const [user, loading] = useAuthState(auth);
@@ -50,9 +51,10 @@ const OrderModal = ({ order }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                console.log(data);
+                toast.success(`Your order is placed successfully`);
             })
-
+        setOrder(null)
     }
     return (
         <div>

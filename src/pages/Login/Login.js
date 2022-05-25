@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading';
-
+import { toast } from 'react-toastify';
 const Login = () => {
     const navigate = useNavigate();
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -25,6 +25,7 @@ const Login = () => {
 
     useEffect(() => {
         if (token) {
+            toast.success('User logged in successfully');
             navigate(from, { replace: true });
         }
     }, [from, navigate, token]);
