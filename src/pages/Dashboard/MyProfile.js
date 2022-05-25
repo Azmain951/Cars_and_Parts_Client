@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 
@@ -39,7 +40,7 @@ const MyProfile = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                toast.success('User profile update successfully!')
             })
     }
     return (

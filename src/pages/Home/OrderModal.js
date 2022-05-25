@@ -51,7 +51,6 @@ const OrderModal = ({ order, setOrder }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 toast.success(`Your order is placed successfully`);
             })
         setOrder(null)

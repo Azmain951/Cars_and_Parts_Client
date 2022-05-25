@@ -71,7 +71,6 @@ const CheckoutFrom = ({ order }) => {
         else {
             setCardError('');
             setTransactionId(paymentIntent.id);
-            console.log(paymentIntent)
             setSuccess('Congrats! Your payment is completed.');
             setCost(totalPrice);
 

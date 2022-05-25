@@ -39,7 +39,6 @@ const ManageOrder = ({ index, order }) => {
 
         }).then(res => res.json())
             .then(data => {
-                console.log(data);
                 toast.success(`Order of ${quantity} units of ${product} is shipped to ${name}, ${address} successfully`);
             })
         setDeliver(null);
