@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import DeleteModal from '../Shared/DeleteModal';
+import { toast } from 'react-toastify';
+
 
 const ManageProduct = ({ index, product }) => {
     const { _id, name, img, price, stock } = product;
@@ -13,7 +15,7 @@ const ManageProduct = ({ index, product }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                toast.success(`The Product ${name} with ${stock} units of stock is removed successfully!!!`);
             })
     }
     return (

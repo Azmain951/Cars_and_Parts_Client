@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactUs = () => {
     return (
-        <div class="hero mt-10 py-10 shadow-2xl rounded-lg">
+        <div class="m-10 py-10 shadow-2xl rounded-lg">
             <div class="hero-content flex-col lg:flex-row-reverse bg-base-100 w-3/4 mx-auto justify-between">
                 <div class="text-center ml-10">
                     <h1 class="text-5xl font-bold text-primary">Contact Us!</h1>
