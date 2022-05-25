@@ -18,7 +18,7 @@ const Navbar = () => {
     }
     return (
         <nav className="navbar bg-base-100 px-0 lg:px-12">
-            <div className="navbar">
+            <div className="navbar start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -46,7 +46,7 @@ const Navbar = () => {
                 </div>
                 <Link className="btn btn-ghost normal-case text-2xl font-bold" to='/'><img className='mr-2' src={logo} alt="" /> Cars and Parts</Link>
             </div>
-            <div className="navbar-end hidden lg:flex">
+            <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='allProducts'>Products</Link></li>
@@ -55,7 +55,7 @@ const Navbar = () => {
                     {
                         user && <li><Link to="/dashboard">Dashboard</Link></li>
                     }
-                    {user ? <li>{user?.displayName}</li> : ''}
+                    {user ? <li><Link to='/dashboard'>{user?.displayName}</Link></li> : ''}
                     <li>
                         {user ?
                             <>
@@ -66,7 +66,11 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-
+            <div className="navbar-end">
+                <label htmlFor="dashboard-sidebar" tabIndex="1" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+            </div>
         </nav>
     );
 };
