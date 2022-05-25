@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const User = ({ user, index }) => {
     const { email, role } = user;
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://obscure-wave-68553.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
@@ -21,10 +21,11 @@ const User = ({ user, index }) => {
             <th>{index + 1}</th>
             <th>{email}</th>
             <th>
-                {role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}
+                {role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}
             </th>
             <th>
-                <button className='btn btn-xs btn-error'>Remove User</button>
+                {role !== 'admin' && <button className='btn btn-xs btn-error'>Remove User</button>}
+                {role === 'admin' && <span className='text-warning'>Admin can't be removed</span>}
             </th>
         </tr>
     );

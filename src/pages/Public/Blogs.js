@@ -5,9 +5,9 @@ const Blogs = () => {
         <div className='m-5 p-5'>
             <h2 className='text-center text-3xl'>Blogs</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10 m-5'>
-                <div class="card max-h-72 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">How will you improve the performance of a React Application?</h2>
+                <div className="card max-h-72 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">How will you improve the performance of a React Application?</h2>
                         <ul>
                             <li>1. By organizing React code in components.</li>
                             <li>2. By avoiding code duplication/repetition.</li>
@@ -18,9 +18,9 @@ const Blogs = () => {
                     </div>
                 </div>
 
-                <div class="card max-h-72 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">What are the different ways to manage a state in a React application?</h2>
+                <div className="card max-h-72 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">What are the different ways to manage a state in a React application?</h2>
                         <ul>
                             <li>1. Local State: useState, useReducer hook</li>
                             <li>2. Global State: Context API, Recoil, Jotai</li>
@@ -29,22 +29,22 @@ const Blogs = () => {
                         </ul>
                     </div>
                 </div>
-                <div class="card max-h-72 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">How does prototypical inheritance work?</h2>
+                <div className="card max-h-72 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">How does prototypical inheritance work?</h2>
                         <p>The Prototypal Inheritance is a technique in javascript, Which is used to add methods and properties in objects. It is a technique by which an object can inherit the properties and methods of another object.</p>
                     </div>
                 </div>
 
-                <div class="card max-h-72 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">Why you do not set the state directly in React.</h2>
+                <div className="card max-h-72 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">Why you do not set the state directly in React.</h2>
                         <p>As we know, React use the diff algorithms. It compares the new updated DOM with the old DOM. That is why we shouldn't update the state directly, so we can have two different object references in memory.Then react will figure out what is changed in Virtual DOM and based on that it will update the real DOM accordingly.</p>
                     </div>
                 </div>
-                <div class="card max-h-72 bg-base-100 shadow-xl">
-                    <div class="card-body overflow-x-auto overflow-y-auto">
-                        <h2 class="card-title">You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h2>
+                <div className="card max-h-72 bg-base-100 shadow-xl">
+                    <div className="card-body overflow-x-auto overflow-y-auto">
+                        <h2 className="card-title">You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h2>
 
                         <pre>
                             {`
@@ -61,9 +61,9 @@ console.log(findProduct(name));
                     </div>
                 </div>
 
-                <div class="card max-h-72 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">What is a unit test? Why should write unit tests?</h2>
+                <div className="card max-h-72 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">What is a unit test? Why should write unit tests?</h2>
                         <p>Unit testing is a technique, which individual modules are tested to determine if there are any issues by the developer himself.
                             <br /><br />
                             Unit testing ensures that all code meets quality standards before it's deployed.Unit tests are also especially useful when it comes to refactoring or re-writing a piece a code.

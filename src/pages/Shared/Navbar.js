@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { toast } from 'react-toastify';
+import logo from '../../images/logo.png';
 
 const Navbar = () => {
     const [user, loading] = useAuthState(auth);
@@ -30,9 +31,9 @@ const Navbar = () => {
                         {
                             user && <li><Link to="/dashboard">Dashboard</Link></li>
                         }
-                        <li>
-                            {user ? <li>{user?.displayName}</li> : ''}
-                        </li>
+
+                        {user ? <li>{user?.displayName}</li> : ''}
+
                         <li>
                             {user ?
                                 <>
@@ -43,7 +44,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl" to='/'>Car's Hub</Link>
+                <Link className="btn btn-ghost normal-case text-2xl font-bold" to='/'><img className='mr-2' src={logo} alt="" /> Cars and Parts</Link>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -54,9 +55,7 @@ const Navbar = () => {
                     {
                         user && <li><Link to="/dashboard">Dashboard</Link></li>
                     }
-                    <li>
-                        {user ? <li>{user?.displayName}</li> : ''}
-                    </li>
+                    {user ? <li>{user?.displayName}</li> : ''}
                     <li>
                         {user ?
                             <>

@@ -16,7 +16,7 @@ const CheckoutFrom = ({ order }) => {
     const totalPrice = price * quantity;
     const [cost, setCost] = useState('');
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://obscure-wave-68553.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -81,7 +81,7 @@ const CheckoutFrom = ({ order }) => {
                 status: 'pending'
             }
 
-            fetch(`http://localhost:5000/orders/${_id}`, {
+            fetch(`https://obscure-wave-68553.herokuapp.com/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

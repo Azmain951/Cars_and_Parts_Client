@@ -19,8 +19,8 @@ const MyOrders = () => {
     return (
         <div className='shadow-2xl m-5 p-5 rounded-box'>
             <h2 className='text-2xl text-center mb-5'>Your Orders {myOrders?.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full text-center">
+            <div className="overflow-x-auto">
+                <table className="table w-full text-center">
                     <thead>
                         <tr>
                             <th></th>

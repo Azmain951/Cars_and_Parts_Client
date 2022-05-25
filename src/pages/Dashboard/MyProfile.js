@@ -7,7 +7,7 @@ const MyProfile = () => {
     const [user, loading] = useAuthState(auth);
     const [userInfo, setUserInfo] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user?.email}`, {
+        fetch(`https://obscure-wave-68553.herokuapp.com/user/${user?.email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('token')}`
@@ -27,7 +27,7 @@ const MyProfile = () => {
         const address = e.target.address.value;
 
         const updatedInfo = { phone, address };
-        fetch(`http://localhost:5000/user/${user.email}`, {
+        fetch(`https://obscure-wave-68553.herokuapp.com/user/${user.email}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -47,34 +47,34 @@ const MyProfile = () => {
             <h2 className='mb-3'>My Profile</h2>
             <div className='flex w-3/4 mx-auto mb-5'>
                 <div className='flex-1 mr-5'>
-                    <div class="w-full max-w-sm m-5">
-                        <label class="label">
-                            <span class="label-text">Name</span>
+                    <div className="w-full max-w-sm m-5">
+                        <label className="label">
+                            <span className="label-text">Name</span>
                         </label>
-                        <input disabled readOnly type="text" value={user?.displayName} class="input input-bordered w-full max-w-sm " />
+                        <input disabled readOnly type="text" value={user?.displayName} className="input input-bordered w-full max-w-sm " />
                     </div>
-                    <div class="w-full max-w-sm m-5">
-                        <label class="label">
-                            <span class="label-text">Email</span>
+                    <div className="w-full max-w-sm m-5">
+                        <label className="label">
+                            <span className="label-text">Email</span>
                         </label>
-                        <input disabled readOnly type="text" value={user?.email} class="input input-bordered w-full max-w-sm " />
+                        <input disabled readOnly type="text" value={user?.email} className="input input-bordered w-full max-w-sm " />
                     </div>
                 </div>
                 <form className='flex-1 ml-5' onSubmit={handleProfileUpdate}>
-                    <div class="w-full max-w-sm m-5">
-                        <label class="label">
-                            <span class="label-text">Phone Number</span>
+                    <div className="w-full max-w-sm m-5">
+                        <label className="label">
+                            <span className="label-text">Phone Number</span>
                         </label>
-                        <input type="text" defaultValue={userInfo?.phone || ''} placeholder='Enter Phone Number' name='number' class="input input-bordered w-full max-w-sm " />
+                        <input type="text" defaultValue={userInfo?.phone || ''} placeholder='Enter Phone Number' name='number' className="input input-bordered w-full max-w-sm " />
                     </div>
-                    <div class="w-full max-w-sm m-5">
-                        <label class="label">
-                            <span class="label-text">Address</span>
+                    <div className="w-full max-w-sm m-5">
+                        <label className="label">
+                            <span className="label-text">Address</span>
                         </label>
-                        <textarea name='address' type="text" defaultValue={userInfo?.address || ''} placeholder='Address' class="textarea textarea-bordered w-full max-w-sm " />
+                        <textarea name='address' type="text" defaultValue={userInfo?.address || ''} placeholder='Address' className="textarea textarea-bordered w-full max-w-sm " />
                     </div>
-                    <div class="form-control my-5 ml-5 items-start">
-                        <input type='submit' class="btn btn-primary text-white" value='Update Info' />
+                    <div className="form-control my-5 ml-5 items-start">
+                        <input type='submit' className="btn btn-primary text-white" value='Update Info' />
                     </div>
                 </form>
             </div>

@@ -7,9 +7,9 @@ import DeleverModal from './DeleverModal';
 const ManageOrder = ({ index, order }) => {
     const [selected, setSelected] = useState(null);
     const [deliver, setDeliver] = useState(null);
-    const { _id, name, email, quantity, product, status, address } = order;
+    const { _id, name, email, quantity, product, status, address, transactionId } = order;
     const handleDelete = () => {
-        fetch(`http://localhost:5000/orders/${_id}`, {
+        fetch(`https://obscure-wave-68553.herokuapp.com/orders/${_id}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('token')}`
@@ -25,10 +25,11 @@ const ManageOrder = ({ index, order }) => {
     const handleDeliver = () => {
 
         const payment = {
+            transactionId,
             status: 'shipped'
         }
 
-        fetch(`http://localhost:5000/orders/${_id}`, {
+        fetch(`https://obscure-wave-68553.herokuapp.com/orders/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -52,8 +53,8 @@ const ManageOrder = ({ index, order }) => {
             <td>{quantity}</td>
             <td>{status || ''}</td>
             <td>
-                {(status === 'not paid' || !status) && <label for="delete-order" onClick={() => setSelected(order)} class="btn btn-xs btn-error">Cancel</label>}
-                {status === 'pending' && <label for="deliver-modal" onClick={() => setDeliver(order)} class="btn btn-xs btn-warning">Deliver</label>}
+                {(status === 'not paid' || !status) && <label htmlFor="delete-order" onClick={() => setSelected(order)} className="btn btn-xs btn-error">Cancel</label>}
+                {status === 'pending' && <label htmlFor="deliver-modal" onClick={() => setDeliver(order)} className="btn btn-xs btn-warning">Deliver</label>}
                 {status === 'shipped' && <span className='text text-warning'>Delivered</span>}
             </td>
             {

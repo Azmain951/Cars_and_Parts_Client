@@ -34,17 +34,17 @@ const AddReview = () => {
         <div className='shadow-2xl rounded-box text-center m-5 p-5'>
             <h2 className='text-3xl'>Add a review</h2>
             <form onSubmit={handleReview} className='w-1/2 mx-auto m-10 p-10 shadow-2xl rounded'>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Email</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Email</span>
                     </label>
-                    <input readOnly type="text" value={user?.email} class="input input-bordered" />
+                    <input readOnly type="text" value={user?.email} className="input input-bordered" />
                 </div>
                 <div>
-                    <label class="label">
-                        <span class="label-text">Ratings</span>
+                    <label className="label">
+                        <span className="label-text">Ratings</span>
                     </label>
-                    <select name='rating' class="select select-bordered w-full">
+                    <select name='rating' className="select select-bordered w-full">
                         <option selected>5</option>
                         <option>4</option>
                         <option>3</option>
@@ -52,14 +52,14 @@ const AddReview = () => {
                         <option>1</option>
                     </select>
                 </div>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Comments</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Comments</span>
                     </label>
-                    <textarea type="text" name='comment' placeholder="write about the product / your experience" class="textarea textarea-bordered" />
+                    <textarea type="text" name='comment' placeholder="write about the product / your experience" className="textarea textarea-bordered" />
                 </div>
-                <div class="form-control mt-6">
-                    <input type='submit' class="btn btn-primary text-white" value='Post Review' />
+                <div className="form-control mt-6">
+                    <input type='submit' className="btn btn-primary text-white" value='Post Review' />
                 </div>
             </form>
 

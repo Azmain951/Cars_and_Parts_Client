@@ -39,44 +39,44 @@ const AddProduct = () => {
         <div className='my-5'>
             <form onSubmit={handleAddProduct} className='w-1/2 mx-auto p-10 shadow-2xl rounded'>
                 <h2 className='text-3xl text-center'>Add a product</h2>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Product Name</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Product Name</span>
                     </label>
-                    <input type="text" placeholder='Product Name' name='product' class="input input-bordered" />
+                    <input type="text" placeholder='Product Name' name='product' className="input input-bordered" />
                 </div>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Product Description</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Product Description</span>
                     </label>
-                    <textarea type="text" placeholder='Product Name' name='description' class="textarea textarea-bordered" />
+                    <textarea type="text" placeholder='Product Name' name='description' className="textarea textarea-bordered" />
                 </div>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Price($ per unit)</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Price($ per unit)</span>
                     </label>
-                    <input type="text" placeholder='Product Price per unit($)' name='price' class="input input-bordered" />
+                    <input type="text" placeholder='Product Price per unit($)' name='price' className="input input-bordered" />
                 </div>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Available Stock</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Available Stock</span>
                     </label>
-                    <input type="number" placeholder='Stock Quantity' name='stock' class="input input-bordered" />
+                    <input type="number" placeholder='Stock Quantity' name='stock' className="input input-bordered" />
                 </div>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Minimum Order Quantity</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Minimum Order Quantity</span>
                     </label>
-                    <input type="number" placeholder='Minimum Order Quantity' name='min' class="input input-bordered" />
+                    <input type="number" placeholder='Minimum Order Quantity' name='min' className="input input-bordered" />
                 </div>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Product Image</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Product Image</span>
                     </label>
-                    <input type="text" placeholder='Product Image Link' name='img' class="input input-bordered" />
+                    <input type="text" placeholder='Product Image Link' name='img' className="input input-bordered" />
                 </div>
-                <div class="form-control mt-6">
-                    <input type='submit' class="btn btn-primary text-white" value='Add Product' />
+                <div className="form-control mt-6">
+                    <input type='submit' className="btn btn-primary text-white" value='Add Product' />
                 </div>
             </form>
         </div>

@@ -37,26 +37,26 @@ const Portfolio = () => {
             <div className='mb-10'>
                 <h2 className='text-2xl text-center uppercase mb-3'>Top Projects</h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-10'>
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <h2 class="card-title text-primary">Fruit Basket</h2>
+                    <div className="card bg-base-100 shadow-xl">
+                        <div className="card-body">
+                            <h2 className="card-title text-primary">Fruit Basket</h2>
                             <p className='capitalize'>Web based fruit warehouse management system</p>
-                            <a class="btn btn-primary btn-xs text-white" href='https://fruit-basket-523c2.web.app/' target='_blank'>Visit Website</a>
+                            <a className="btn btn-primary btn-xs text-white" href='https://fruit-basket-523c2.web.app/' target='_blank'>Visit Website</a>
                         </div>
                     </div>
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <h2 class="card-title text-primary">Exam Prep</h2>
+                    <div className="card bg-base-100 shadow-xl">
+                        <div className="card-body">
+                            <h2 className="card-title text-primary">Exam Prep</h2>
                             <p className='capitalize'>Web based exam preparation website</p>
-                            <a class="btn btn-primary btn-xs text-white" href='https://examprep-1edff.web.app/' target='_blank'>Visit Website</a>
+                            <a className="btn btn-primary btn-xs text-white" href='https://examprep-1edff.web.app/' target='_blank'>Visit Website</a>
 
                         </div>
                     </div>
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <h2 class="card-title text-primary">Personal Gym Trainer</h2>
+                    <div className="card bg-base-100 shadow-xl">
+                        <div className="card-body">
+                            <h2 className="card-title text-primary">Personal Gym Trainer</h2>
                             <p className='capitalize'>Web based website for personal gym trainer</p>
-                            <a class="btn btn-primary btn-xs text-white" href='https://personal-gym-trainer.web.app/' target='_blank'>Visit Website</a>
+                            <a className="btn btn-primary btn-xs text-white" href='https://personal-gym-trainer.web.app/' target='_blank'>Visit Website</a>
 
                         </div>
                     </div>

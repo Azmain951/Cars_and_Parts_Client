@@ -7,7 +7,7 @@ const ManageProduct = ({ index, product }) => {
     const { _id, name, img, price, stock } = product;
     const [selected, setSelected] = useState(null);
     const handleDelete = () => {
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`https://obscure-wave-68553.herokuapp.com/products/${_id}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('token')}`
@@ -23,8 +23,8 @@ const ManageProduct = ({ index, product }) => {
         <tr>
             <th>{index + 1}</th>
             <td>
-                <div class="avatar">
-                    <div class="w-16 rounded-xl">
+                <div className="avatar">
+                    <div className="w-16 rounded-xl">
                         <img src={img} alt={name} />
                     </div>
                 </div>
@@ -33,7 +33,7 @@ const ManageProduct = ({ index, product }) => {
             <td>{stock}</td>
             <td>{price}</td>
             <td>
-                <label for="delete-modal" onClick={() => setSelected(product)} class="btn btn-xs btn-error">Remove</label>
+                <label htmlFor="delete-modal" onClick={() => setSelected(product)} className="btn btn-xs btn-error">Remove</label>
             </td>
             {
                 selected && <DeleteModal

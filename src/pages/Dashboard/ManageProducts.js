@@ -11,8 +11,8 @@ const ManageProducts = () => {
     return (
         <div className='m-5 p-5 shadow-2xl rounded-box'>
             <h2 className='text-3xl text-center mb-3'>All Products</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full text-center">
+            <div className="overflow-x-auto">
+                <table className="table w-full text-center">
                     <thead>
                         <tr>
                             <th></th>

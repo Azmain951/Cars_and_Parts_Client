@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import "swiper/css/bundle";
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import AddProduct from './pages/Dashboard/AddProduct';
@@ -21,6 +22,7 @@ import Blogs from './pages/Public/Blogs';
 import Portfolio from './pages/Public/Portfolio';
 import Navbar from './pages/Shared/Navbar';
 import NotFound from './pages/Shared/NotFound';
+import AllProducts from './pages/Public/AllProducts';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/allProducts' element={<AllProducts></AllProducts>}></Route>
         <Route path='place-order/:id' element={
           <RequireAuth><PlaceOrder></PlaceOrder></RequireAuth>
         }></Route>
