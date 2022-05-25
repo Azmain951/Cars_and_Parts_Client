@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MyOrder = ({ order, index }) => {
-    const { _id, product, quantity, price, paid } = order
+    const { _id, product, quantity, price, paid, transactionId } = order
     return (
         <tr class="hover">
             <th>{index + 1}</th>
@@ -13,7 +13,7 @@ const MyOrder = ({ order, index }) => {
             <td>
                 {(price && !paid) && <Link to={`/dashboard/payment/${_id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
                 {(price && paid) && <span className='text-success'>paid</span>}
-                {paid ? '' : <button className='btn btn-xs btn-error ml-3'>Cancel</button>}
+                {paid ? <p><small>Transaction ID: {transactionId}</small></p> : <button className='btn btn-xs btn-error ml-3'>Cancel</button>}
             </td>
         </tr>
     );

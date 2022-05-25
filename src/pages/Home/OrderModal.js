@@ -23,12 +23,11 @@ const OrderModal = ({ order }) => {
             address: data.address,
             productId: _id,
             product: name,
-            price,
-            stock
+            price
         }
 
         fetch('https://obscure-wave-68553.herokuapp.com/orders', {
-            method: 'PATCH',
+            method: 'POST',
             headers: {
                 'content-type': 'application/json',
                 headers: {
