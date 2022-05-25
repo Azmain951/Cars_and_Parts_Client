@@ -20,7 +20,7 @@ const MyOrders = () => {
         <div className='shadow-2xl m-5 p-5 rounded-box'>
             <h2 className='text-2xl text-center mb-5'>Your Orders {myOrders?.length}</h2>
             <div class="overflow-x-auto">
-                <table class="table w-full">
+                <table class="table w-full text-center">
                     <thead>
                         <tr>
                             <th></th>
@@ -28,6 +28,7 @@ const MyOrders = () => {
                             <th>Ordered Quantity (units)</th>
                             <th>Price ($ per unit)</th>
                             <th>Total Cost ($)</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>

@@ -74,7 +74,8 @@ const CheckoutFrom = ({ order }) => {
 
             const payment = {
                 order: _id,
-                transactionId: paymentIntent.id
+                transactionId: paymentIntent.id,
+                status: 'pending'
             }
 
             fetch(`http://localhost:5000/orders/${_id}`, {

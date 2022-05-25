@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
@@ -9,6 +9,17 @@ const OrderModal = ({ order }) => {
     const [status, setStatus] = useState(false);
     const [user, loading] = useAuthState(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [userInfo, setUserInfo] = useState({});
+    useEffect(() => {
+        fetch(`http://localhost:5000/user/${user?.email}`, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => setUserInfo(data))
+    }, [userInfo]);
 
     if (loading) {
         return <Loading></Loading>
@@ -23,7 +34,8 @@ const OrderModal = ({ order }) => {
             address: data.address,
             productId: _id,
             product: name,
-            price
+            price,
+            status: 'not paid'
         }
 
         fetch('https://obscure-wave-68553.herokuapp.com/orders', {
@@ -110,7 +122,7 @@ const OrderModal = ({ order }) => {
                             <label className="label">
                                 <span className="label-text">Phone Number</span>
                             </label>
-                            <input type="text" placeholder='phone number' className="input input-bordered w-full max-w-xs"
+                            <input type="text" defaultValue={userInfo?.phone || ''} placeholder='phone number' className="input input-bordered w-full max-w-xs"
                                 {...register("contact", {
                                     required: {
                                         value: true,
@@ -127,7 +139,7 @@ const OrderModal = ({ order }) => {
                             <label className="label">
                                 <span className="label-text">Address</span>
                             </label>
-                            <textarea type="text" placeholder='delivery address' className="textarea textarea-bordered w-full max-w-xs"
+                            <textarea type="text" defaultValue={userInfo?.address || ''} placeholder='delivery address' className="textarea textarea-bordered w-full max-w-xs"
                                 {...register("address", {
                                     required: {
                                         value: true,
