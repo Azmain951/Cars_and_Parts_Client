@@ -37,7 +37,7 @@ const AddProduct = () => {
 
     return (
         <div className='my-5'>
-            <form onSubmit={handleAddProduct} className='w-1/2 mx-auto p-10 shadow-2xl rounded'>
+            <form onSubmit={handleAddProduct} className='w-full lg:w-1/2 mx-auto p-10 shadow-none lg:shadow-2xl rounded'>
                 <h2 className='text-3xl text-center'>Add a product</h2>
                 <div className="form-control">
                     <label className="label">

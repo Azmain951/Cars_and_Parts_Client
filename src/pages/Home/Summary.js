@@ -2,10 +2,10 @@ import React from 'react';
 
 const Summary = () => {
     return (
-        <div className='my-28 mx-10 shadow-2xl py-10 rounded-box'>
-            <h2 className='text-center text-4xl text-primary uppercase mb-2'>Business Summary</h2>
-            <p className='text-center text-xl italic w-3/4 mx-auto'>We offer top quality products at reasonable prices, provide unparalleled technical assistance, and back it all up with outstanding customer support.</p>
-            <div className="stats w-full p-6 mt-12 text-center">
+        <div className='my-28 mx-4 lg:mx-10 shadow-2xl py-10 rounded-box'>
+            <h2 className='text-center text-2xl lg:text-4xl text-primary uppercase mb-2'>Business Summary</h2>
+            <p className='text-center text-md lg:text-xl italic w-3/4 mx-auto'>We offer top quality products at reasonable prices, provide unparalleled technical assistance, and back it all up with outstanding customer support.</p>
+            <div className="stats w-full p-6 mt-6 lg:mt-12 text-center">
                 <div className="stat">
                     <div className="stat-title">Annual Revenue</div>
                     <div className="stat-value text-primary">100M+</div>

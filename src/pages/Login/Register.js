@@ -48,8 +48,8 @@ const Register = () => {
 
 
     return (
-        <div className='flex justify-center items-center h-screen'>
-            <div className="card w-3/4 lg:w-1/3 shadow-xl">
+        <div className='flex justify-center items-center h-auto lg:h-screen'>
+            <div className="card w-full lg:w-1/3 shadow-none lg:shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl">Sign Up</h2>
                     <form className='flex flex-col justify-center items-center' onSubmit={handleSubmit(onSubmit)}>

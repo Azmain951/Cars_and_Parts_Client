@@ -42,8 +42,8 @@ const Login = () => {
         signInWithEmailAndPassword(data.email, data.password);
     };
     return (
-        <div className='flex justify-center items-center h-screen'>
-            <div className="card w-3/4 lg:w-1/3 shadow-xl">
+        <div className='flex justify-center items-center h-auto lg:h-screen'>
+            <div className="card w-full lg:w-1/3 shadow-none lg:shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl">Login</h2>
                     <form className='flex flex-col justify-center items-center' onSubmit={handleSubmit(onSubmit)}>
@@ -95,7 +95,7 @@ const Login = () => {
                         {signinError}
                         <input className='btn btn-primary w-full max-w-xs text-white mt-3' type="submit" value='login' />
                     </form>
-                    <p className='text-center'><small>New to  <Link className='text-primary' to='/register'>Create New Account</Link></small></p>
+                    <p className='text-center'><small>New to Cars & Parts <Link className='text-primary' to='/register'>Create New Account</Link></small></p>
                     <div className="divider" > OR</div >
                     <button
                         onClick={() => signInWithGoogle()}

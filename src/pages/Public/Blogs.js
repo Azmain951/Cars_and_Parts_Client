@@ -2,11 +2,11 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='m-5 p-5'>
+        <div className='m-1 lg:m-5 p-1 lg:p-5'>
             <h2 className='text-center text-3xl'>Blogs</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10 m-5'>
-                <div className="card max-h-72 bg-base-100 shadow-xl">
-                    <div className="card-body">
+                <div className="card lg:max-h-72 bg-base-100 shadow-xl">
+                    <div className="card-body overflow-x-auto overflow-y-auto">
                         <h2 className="card-title">How will you improve the performance of a React Application?</h2>
                         <ul>
                             <li>1. By organizing React code in components.</li>
@@ -19,7 +19,7 @@ const Blogs = () => {
                 </div>
 
                 <div className="card max-h-72 bg-base-100 shadow-xl">
-                    <div className="card-body">
+                    <div className="card-body overflow-x-auto overflow-y-auto">
                         <h2 className="card-title">What are the different ways to manage a state in a React application?</h2>
                         <ul>
                             <li>1. Local State: useState, useReducer hook</li>
@@ -30,14 +30,14 @@ const Blogs = () => {
                     </div>
                 </div>
                 <div className="card max-h-72 bg-base-100 shadow-xl">
-                    <div className="card-body">
+                    <div className="card-body overflow-x-auto overflow-y-auto">
                         <h2 className="card-title">How does prototypical inheritance work?</h2>
                         <p>The Prototypal Inheritance is a technique in javascript, Which is used to add methods and properties in objects. It is a technique by which an object can inherit the properties and methods of another object.</p>
                     </div>
                 </div>
 
                 <div className="card max-h-72 bg-base-100 shadow-xl">
-                    <div className="card-body">
+                    <div className="card-body overflow-x-auto overflow-y-auto">
                         <h2 className="card-title">Why you do not set the state directly in React.</h2>
                         <p>As we know, React use the diff algorithms. It compares the new updated DOM with the old DOM. That is why we shouldn't update the state directly, so we can have two different object references in memory.Then react will figure out what is changed in Virtual DOM and based on that it will update the real DOM accordingly.</p>
                     </div>
@@ -62,7 +62,7 @@ console.log(findProduct(name));
                 </div>
 
                 <div className="card max-h-72 bg-base-100 shadow-xl">
-                    <div className="card-body">
+                    <div className="card-body overflow-x-auto overflow-y-auto">
                         <h2 className="card-title">What is a unit test? Why should write unit tests?</h2>
                         <p>Unit testing is a technique, which individual modules are tested to determine if there are any issues by the developer himself.
                             <br /><br />

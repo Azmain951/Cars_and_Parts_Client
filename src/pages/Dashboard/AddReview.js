@@ -31,9 +31,9 @@ const AddReview = () => {
         e.target.reset();
     }
     return (
-        <div className='shadow-2xl rounded-box text-center m-5 p-5'>
+        <div className='shadow-none lg:shadow-2xl rounded-box text-center m-5 p-5'>
             <h2 className='text-3xl'>Add a review</h2>
-            <form onSubmit={handleReview} className='w-1/2 mx-auto m-10 p-10 shadow-2xl rounded'>
+            <form onSubmit={handleReview} className='w-full lg:w-1/2 mx-auto m-0 lg:m-10 p-10 shadow-none lg:shadow-2xl rounded'>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
@@ -62,10 +62,6 @@ const AddReview = () => {
                     <input type='submit' className="btn btn-primary text-white" value='Post Review' />
                 </div>
             </form>
-
-            <div className='mt-5'>
-                <h2 className='text-3xl'>My Reviews</h2>
-            </div>
         </div>
     );
 };

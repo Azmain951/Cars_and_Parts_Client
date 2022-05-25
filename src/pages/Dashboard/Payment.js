@@ -23,7 +23,7 @@ const Payment = () => {
 
     console.log(order);
     return (
-        <div className='w-3/4 mx-auto'>
+        <div className='w-full lg:w-3/4 lg:mx-auto'>
             <div className="card w-full mx-auto max-w-md bg-base-100 shadow-xl my-12">
                 <div className="card-body">
                     <p className="text-success font-bold">Hello, {order?.name}</p>

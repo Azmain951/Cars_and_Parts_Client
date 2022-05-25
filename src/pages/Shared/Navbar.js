@@ -17,7 +17,7 @@ const Navbar = () => {
         toast.success('User is logged out!!!')
     }
     return (
-        <nav className="navbar bg-base-100 px-12">
+        <nav className="navbar bg-base-100 px-0 lg:px-12">
             <div className="navbar">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
